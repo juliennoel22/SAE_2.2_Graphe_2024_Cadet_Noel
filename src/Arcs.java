@@ -31,4 +31,11 @@ public class Arcs{
     public List<Arc> getArcs(){
         return this.arcs;
     }
+
+    @Override
+    public String toString() {
+        return "Arcs{" +
+                "arcs=" + arcs +
+                "}\n";
+    }
 }

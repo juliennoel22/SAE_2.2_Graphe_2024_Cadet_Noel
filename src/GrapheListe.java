@@ -48,6 +48,44 @@ public class GrapheListe implements Graphe{
         int i = getIndice(depart);
         adjacente.get(i).ajouterArc(new Arc(destination, cout));
     }
+
+    @Override
+    public String toString() {
+        return "GrapheListe{" +
+                "noeuds=" + noeuds +
+                ", adjacente=" + adjacente +
+                "}\n";
+    }
+
+    /**
+     * Méthode toString
+     * Retourne une représentation textuelle du graphe
+     * @return une chaîne de caractères représentant le graphe
+     * On souhaite pouvoir afficher le contenu d’un objet GrapheListe sous la forme d’une
+     * chaˆıne de caract`eres structur´ee de la mani`ere suivante :
+     * fichier
+     * A -> B(12) D(87)
+     * B -> E(11)
+     * C -> A(19)
+     * D -> B(23) C(10)
+     * E -> D(43)
+     * Ecrire une m´ethode ´ toString permettant d’afficher le graphe sous cette forme.
+     */
+
+//    @Override
+//    public String toString() {
+//        String s = "";
+//        for (int i = 0; i < noeuds.size(); i++) {
+//            s += noeuds.get(i) + " -> ";
+//            List<Arc> arcs = adjacente.get(i).getArcs();
+//            for (int j = 0; j < arcs.size(); j++) {
+//                s += arcs.get(j).dest + "(" + arcs.get(j).cout + ") ";
+//            }
+//            s += "\n";
+//        }
+//        return s;
+//    }
+
     @Override
     public List<String> listeNoeuds() {
         return noeuds;

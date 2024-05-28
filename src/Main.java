@@ -8,12 +8,10 @@ public class Main {
         graphe.ajouterArc("B", "E", 11);
         graphe.ajouterArc("D", "B", 23);
         graphe.ajouterArc("D", "C", 10);
-        graphe.ajouterArc("A", "C", 19);
+        graphe.ajouterArc("C", "A", 19);
         graphe.ajouterArc("E", "D", 43);
 
         // Afficher les noeuds
-        System.out.println("Noeuds du graphe : " + graphe.listeNoeuds());
-
-
+        System.out.println(graphe);
     }
 }

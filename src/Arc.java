@@ -12,4 +12,12 @@ public class    Arc {
         this.dest = dest;
         this.cout = cout;
     }
+
+    @Override
+    public String toString() {
+        return "Arc{" +
+                "dest='" + dest + '\'' +
+                ", cout=" + cout +
+                "}\n";
+    }
 }
