@@ -8,7 +8,7 @@ public class    Arc {
     * @param dest nœud de destination
     * @param cout poids de l'arc
     */
-    public Arc(String dest, int cout){
+    public Arc(String dest, double cout){
         this.dest = dest;
         this.cout = cout;
     }
