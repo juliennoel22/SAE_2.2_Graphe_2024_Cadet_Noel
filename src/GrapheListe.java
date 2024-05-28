@@ -49,13 +49,13 @@ public class GrapheListe implements Graphe{
         adjacente.get(i).ajouterArc(new Arc(destination, cout));
     }
 
-    @Override
-    public String toString() {
-        return "GrapheListe{" +
-                "noeuds=" + noeuds +
-                ", adjacente=" + adjacente +
-                "}\n";
-    }
+//    @Override
+//    public String toString() {
+//        return "GrapheListe{" +
+//                "noeuds=" + noeuds +
+//                ", adjacente=" + adjacente +
+//                "}\n";
+//    }
 
     /**
      * Méthode toString
@@ -72,19 +72,19 @@ public class GrapheListe implements Graphe{
      * Ecrire une m´ethode ´ toString permettant d’afficher le graphe sous cette forme.
      */
 
-//    @Override
-//    public String toString() {
-//        String s = "";
-//        for (int i = 0; i < noeuds.size(); i++) {
-//            s += noeuds.get(i) + " -> ";
-//            List<Arc> arcs = adjacente.get(i).getArcs();
-//            for (int j = 0; j < arcs.size(); j++) {
-//                s += arcs.get(j).dest + "(" + arcs.get(j).cout + ") ";
-//            }
-//            s += "\n";
-//        }
-//        return s;
-//    }
+    @Override
+    public String toString() {
+        String s = "";
+        for (int i = 0; i < noeuds.size(); i++) {
+            s += noeuds.get(i) + " -> ";
+            List<Arc> arcs = adjacente.get(i).getArcs();
+            for (int j = 0; j < arcs.size(); j++) {
+                s += arcs.get(j).dest + "(" + arcs.get(j).cout + ") ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
 
     @Override
     public List<String> listeNoeuds() {
