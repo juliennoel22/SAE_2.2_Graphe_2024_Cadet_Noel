@@ -24,7 +24,7 @@ public class GrapheListe implements Graphe{
         return noeuds.indexOf(n);
     }
 
-    public List<Arc> suivant(String n){
+    public List<Arc> suivants(String n){
         int i = noeuds.indexOf(n);
         if(i!=-1)
             return adjacente.get(i).getArcs();
@@ -35,21 +35,22 @@ public class GrapheListe implements Graphe{
     /**
      * Méthode ajouterArc
      */
-    public void ajouterArc(String depart, String destination, double cout){
-        if(noeuds.contains(depart))
+    public void ajouterArc(String depart, String destination, double cout) {
+        if (!noeuds.contains(depart)) {
             noeuds.add(depart);
-        if(noeuds.contains(destination))
-            noeuds.add(destination);
-        Arc arc = new Arc(destination,cout);
-        List<Arc> suivant = suivant(depart);
-        if(!suivant.contains(arc)){
-            int i = getIndice(depart);
-            if(i != -1)
-                adjacente.get(getIndice(depart)).ajouterArc(arc);
-            else
-                Arcs arcs = new Arcs();
-                arcs.ajouterArc(arc);
-                adjacente.add(arcs);
+            adjacente.add(new Arcs());
         }
+        if (!noeuds.contains(destination)) {
+            noeuds.add(destination);
+            adjacente.add(new Arcs());
+        }
+
+        int i = getIndice(depart);
+        adjacente.get(i).ajouterArc(new Arc(destination, cout));
+    }
+    @Override
+    public List<String> listeNoeuds() {
+        return noeuds;
     }
 }
+
