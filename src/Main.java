@@ -13,5 +13,22 @@ public class Main {
 
         // Afficher les noeuds
         System.out.println(graphe);
+
+
+
+        // Appliquer l'algorithme du point fixe avec 'A' comme point de départ
+        BellmanFord bf = new BellmanFord();
+        Valeur resultat = bf.resoudre(g, "A");
+
+        // Afficher les résultats
+        System.out.println(resultat);
+
+//        public String caracter(String commande, int bool){
+//            for (int i = 0, i < bool ; i++){
+//                System.out.println(i + commande);
+//            }
+//        }
+
     }
+
 }
