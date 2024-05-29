@@ -25,8 +25,8 @@ public class Main {
         // Afficher les résultats
         System.out.println("Valeurs de distance pour chaque nœud (V) + Parent (p) : \n" + resultat);
 
-        List<String> res = resultat.calculerChemin("E");
-        System.out.println("Chemin pour aller de A à E : "+res);
+        List<String> res = resultat.calculerChemin("C");
+        System.out.println("Chemin pour aller de A à C : "+res);
 
     }
 
