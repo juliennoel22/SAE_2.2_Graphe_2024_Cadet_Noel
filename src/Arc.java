@@ -14,6 +14,22 @@ public class Arc {
         this.cout = cout;
     }
 
+    /**
+     * Méthode getDest
+     * @return le noeud de destination
+     */
+    public String getDest(){
+        return this.dest;
+    }
+
+    /**
+     * Méthode getCout
+     * @return le poids de l'arc
+     */
+    public double getCout(){
+        return this.cout;
+    }
+
     @Override
     public String toString() {
         return "Arc{" +
