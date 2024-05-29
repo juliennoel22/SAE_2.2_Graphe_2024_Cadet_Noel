@@ -1,0 +1,35 @@
+Question 8 - Algorithme de la fonction pointFixe
+
+Fonction pointFixe(G : Graphe, depart : Noeud)
+    Entrées
+        L : Dictionnaire[Noeud, Réel]
+        parent : Dictionnaire[Noeud, Noeud]
+        modifie : Booléen
+    Début
+        // Initialisation des distances et des parents
+        Pour chaque noeud X dans G.listeNoeuds() faire
+            L[X] ← +∞
+            parent[X] ← null
+        FinPour
+
+        // Définir la distance du noeud de départ à 0
+        L[depart] ← 0
+
+        // Boucle principale
+        Tant que modifie = faux
+            modifie ← faux
+
+            Pour chaque noeud X dans G.listeNoeuds() faire
+                Pour chaque arc dans G.suivants(X) faire
+                    Déclarer N comme le noeud destination de l'arc
+                    Déclarer cout comme le coût de l'arc
+
+                    // Vérifier si un chemin plus court est trouvé
+                    Si L[X] + cout < L[N] alors
+                        L[N] ← L[X] + cout
+                        parent[N] ← X
+                        modifie ← vrai
+                    FinSi
+                FinPour
+            FinPour
+        Fin tq
