@@ -5,9 +5,9 @@ public class BellmanFord{
      * @param depart point de départ du point fixe
      * @return disantces et parents de chaque noeud
      */
-    public Valeur resoudre(Graphe g, String depart) {
+    public static Valeur resoudre(Graphe g, String depart) {
         Valeur resultat = new Valeur();
-        boolean modifie = false;
+        boolean modifie = true;
 
         //Initialisation des distances et des parents
         for(String noeud : g.listeNoeuds()){
@@ -19,7 +19,7 @@ public class BellmanFord{
         resultat.setValeur(depart, 0);
 
         //Boucle principale de l'algorithme de Bellman-Ford
-        while(modifie == false){
+        while(modifie){
             modifie = false;
             //Parcourir tous les noeuds du graphe
             for (String noeud : g.listeNoeuds()) {

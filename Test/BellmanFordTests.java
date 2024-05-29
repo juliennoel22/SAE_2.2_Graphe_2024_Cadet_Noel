@@ -23,14 +23,14 @@ public class BellmanFordTests {
         assertEquals(0.0, resultat.getValeur("A"), 0.01);
         assertEquals(12.0, resultat.getValeur("B"), 0.01);
         assertEquals(76.0, resultat.getValeur("C"), 0.01);
-        assertEquals(87.0, resultat.getValeur("D"), 0.01);
+        assertEquals(66.0, resultat.getValeur("D"), 0.01);
         assertEquals(23.0, resultat.getValeur("E"), 0.01);
 
         // Assertions pour vérifier les parents des nœuds
         assertEquals(null, resultat.getParent("A"));
         assertEquals("A", resultat.getParent("B"));
         assertEquals("D", resultat.getParent("C"));
-        assertEquals("A", resultat.getParent("D"));
+        assertEquals("E", resultat.getParent("D"));
         assertEquals("B", resultat.getParent("E"));
     }
 }
