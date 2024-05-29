@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Main {
+public class MainDijkstra {
     public static void main(String[] args) {
         GrapheListe graphe = new GrapheListe();
 
@@ -18,16 +15,6 @@ public class Main {
         System.out.println("Noeuds : \n" + graphe);
 
 
-
-        // Appliquer l'algorithme du point fixe avec 'A' comme point de départ
-        BellmanFord bf = new BellmanFord();
-        Valeur resultat = bf.resoudre(graphe, "A");
-        // Afficher les résultats
-        System.out.println("Valeurs de distance pour chaque nœud (V) + Parent (p) : \n" + resultat);
-
-        List<String> res = resultat.calculerChemin("E");
-        System.out.println("Chemin pour aller de A à E : "+res);
-
+        
     }
-
 }

@@ -20,11 +20,11 @@ public class BellmanFordTests {
         Valeur resultat = BellmanFord.resoudre(graphe, "A");
 
         // Assertions pour vérifier les distances à partir du nœud "A"
-        assertEquals(0.0, resultat.getValeur("A"), 0.01);
-        assertEquals(12.0, resultat.getValeur("B"), 0.01);
-        assertEquals(76.0, resultat.getValeur("C"), 0.01);
-        assertEquals(66.0, resultat.getValeur("D"), 0.01);
-        assertEquals(23.0, resultat.getValeur("E"), 0.01);
+        assertEquals(0.0, resultat.getValeur("A"));
+        assertEquals(12.0, resultat.getValeur("B"));
+        assertEquals(76.0, resultat.getValeur("C"));
+        assertEquals(66.0, resultat.getValeur("D"));
+        assertEquals(23.0, resultat.getValeur("E"));
 
         // Assertions pour vérifier les parents des nœuds
         assertEquals(null, resultat.getParent("A"));
