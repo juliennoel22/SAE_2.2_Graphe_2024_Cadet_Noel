@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe Dijkstra
+ * Réalise la méthode de Dijksrat
+ */
 public class Dijkstra{
     /**
      * Algo en pseudo code
@@ -29,6 +33,12 @@ public class Dijkstra{
      *          Fin Si
      *      Fin Pour
      *  Fin Tant que
+     */
+    /**
+     * Méthode resoudre
+     * @param g
+     * @param depart
+     * @return le chemin le plus intéressant
      */
     public static Valeur resoudre(Graphe g, String depart){
         Valeur resultat = new Valeur();
