@@ -86,7 +86,12 @@ public class Valeur {
 
     }
 
-    // Méthode pour calculer le chemin du nœud de départ au nœud passé en paramètre
+    /**
+     * Méthode calculerChemin
+     * Calcule le chemin du noeud de départ au noeud passé en paramètre
+     * @param destination
+     * @return chemin du noeud de départ au noeud destination
+     */
     public List<String> calculerChemin(String destination) {
         List<String> chemin = new ArrayList<>();
         String courant = destination;

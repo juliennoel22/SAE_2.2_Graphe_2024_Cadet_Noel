@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Arcs{
     //Attributs
-    List<Arc> arcs;
+    List<Arc> arcs; //Liste d'arcs
 
     /**
      * Constructeur Arcs
@@ -32,6 +32,10 @@ public class Arcs{
         return this.arcs;
     }
 
+    /**
+     * Méthode toString
+     * @return l'affichage de la liste des arcs
+     */
     @Override
     public String toString() {
         return "Arcs{" +

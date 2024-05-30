@@ -1,12 +1,11 @@
 public class Arc {
     /*Attributs*/
-    String dest; //nom du nœud destination de l’arc
+    String dest; //nom du noeud destination de l’arc
     double cout; //poids de l'arc
 
     /**
      * Constructeur Arc
-     *
-     * @param dest nœud de destination
+     * @param dest noeud de destination
      * @param cout poids de l'arc
      */
     public Arc(String dest, double cout) {
@@ -30,6 +29,10 @@ public class Arc {
         return this.cout;
     }
 
+    /**
+     * Méthode toString
+     * @return l'affichage de la destination de l'arc et son coût
+     */
     @Override
     public String toString() {
         return "Arc{" +

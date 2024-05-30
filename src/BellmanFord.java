@@ -1,3 +1,7 @@
+/**
+ * CLasse BellmanFord
+ * Réalise la méthode du point fixe
+ */
 public class BellmanFord{
     /**
      * Méthode resoudre

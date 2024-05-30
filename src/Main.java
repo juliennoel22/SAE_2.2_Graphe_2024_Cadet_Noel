@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe Main
+ * Exécute la méthode du point fixe de Bellman Ford
+ */
 public class Main {
     public static void main(String[] args) {
         GrapheListe graphe = new GrapheListe();

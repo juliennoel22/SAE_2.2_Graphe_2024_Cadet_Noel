@@ -1,5 +1,9 @@
 import java.util.List;
 
+/**
+ * Classe MainDijkstra
+ * Exécute la méthode de Dijkstra
+ */
 public class MainDijkstra {
     public static void main(String[] args) {
         GrapheListe graphe = new GrapheListe();
