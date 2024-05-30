@@ -17,19 +17,23 @@ public class MainDijkstra {
         System.out.println("Noeuds : \n" + graphe);
 
         // Variables de durées
+        double total = 0;
         double duree;
         double duree_ms;
-        long date_debut = System . nanoTime () ; //début du chronomètre
-        Valeur resultat = null;
+        Valeur resultat_dij = null;
 
+        Dijkstra dij = new Dijkstra();
 
         //Calcul des chemins les plus courts
-        Dijkstra dij = new Dijkstra();
-        Valeur resultat_dij = dij.resoudre(graphe, "A");
+        for (int i = 0; i < 100 ; i++){
+            long date_debut = System . nanoTime () ; //début du chronomètre
+            resultat_dij = dij.resoudre(graphe, "A");
+            long date_fin = System . nanoTime () ;
+            total += date_fin-date_debut;
+        }
 
         //Arrêt du chronomètre et calcul du temps en ns et en ms + affichage
-        long date_fin = System . nanoTime () ;
-        duree = (date_fin - date_debut) ;
+        duree = total/100 ;
         duree_ms = duree / 1000000;
         System.out.println("La duree de calcul du point fixe avec la méthode de Djikstra est de : " + duree + "ns" + " ou " + duree_ms + "ms");
 
